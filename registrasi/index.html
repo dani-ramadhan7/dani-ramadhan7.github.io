@@ -10,6 +10,8 @@
 </head>
 
 <body>
+    <script src="script.js">
+    </script>
     <br>
     <center>
         <h2>Registrasi Kuliah Tatap Muka</h2>
@@ -60,28 +62,9 @@
                 <small id="vaksinHelp" class="form-text text-muted">Harap mengisi status vaksinasi.</small>
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" onclick="javascript:validateForm();">Submit</button>
         </form>
     </div>
-    <script>
-        function validateForm() {
-            if (document.forms["formPendaftaran"]["nama"].value == "") {
-                alert("Nama tidak boleh kosong");
-                document.forms["formPendaftaran"]["nama"].focus();
-                return false;
-            }
-            if (document.forms["formPendaftaran"]["email"].value == "") {
-                alert("Nama tidak boleh kosong");
-                document.forms["formPendaftaran"]["email"].focus();
-                return false;
-            }
-            if (document.forms["formPendaftaran"]["departemen"].selectedIndex < 1) {
-                alert("Pilih Departemen");
-                document.forms["formPendaftaran"]["departemen"].focus();
-                return false;
-            }
-        }
-    </script>
 </body>
 
 </html>
